@@ -1,0 +1,16 @@
+{
+  "name": "chaiblogsite",
+  "version": "1.0.0",
+  "description": "My personal static website (blog + portfolio + whatever else)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "personal",
+    "site"
+  ],
+  "author": "Chaitanya Palaka",
+  "license": "ISC"
+}
