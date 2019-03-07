@@ -1,5 +1,6 @@
 const path = require("path");
 const webpack = require("webpack");
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: "./src/index.js",
@@ -19,7 +20,13 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|gif)$/,
                 use: [
-                    'file-loader'
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            outputPath: 'images',
+                            name: '[name].[ext]'
+                        },
+                    },
                 ]
             },
             {
@@ -38,14 +45,7 @@ module.exports = {
     resolve: { extensions: ["*", ".js", ".jsx"] },
     output: {
         path: path.resolve(__dirname, "dist/"),
-        publicPath: "/dist/",
         filename: "bundle.js"
     },
-    devServer: {
-        contentBase: path.join(__dirname, "public/"),
-        port: 3000,
-        publicPath: "http://localhost:3000/dist/",
-        hotOnly: true
-    },
-    plugins: [new webpack.HotModuleReplacementPlugin()]
+    plugins: [new HtmlWebpackPlugin({ template: 'public/prod-index.html' })]
 };

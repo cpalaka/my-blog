@@ -19,7 +19,9 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|gif)$/,
                 use: [
-                    'file-loader'
+                    {
+                        loader: 'file-loader'
+                    },
                 ]
             },
             {
@@ -41,6 +43,7 @@ module.exports = {
         publicPath: "/dist/",
         filename: "bundle.js"
     },
+    devtool: 'inline-source-map',
     devServer: {
         contentBase: path.join(__dirname, "public/"),
         port: 3000,
