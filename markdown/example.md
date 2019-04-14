@@ -1,9 +1,8 @@
----
-layout: post
-title: blog post 1
-author: me?
----
-
+----
+title: example Post 1
+tags: test, firstpost, blog
+date: 04/09/2019
+----
 Heading
 =======
 
@@ -23,7 +22,6 @@ Horizontal rule:
 ---
 
 Bullet list:
-
   * apples
   * oranges
   * pears

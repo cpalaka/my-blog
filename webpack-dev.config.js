@@ -20,21 +20,20 @@ module.exports = {
                 test: /\.(png|svg|jpg|gif)$/,
                 use: [
                     {
-                        loader: 'file-loader'
+                        loader: 'file-loader',
+                        options: {
+                            name: '[path][name].[ext]'
+                        }
                     },
                 ]
             },
             {
                 test: /\.md$/,
                 use: [
-                    {
-                        loader: "html-loader"
-                    },
-                    {
-                        loader: "markdown-loader"
-                    }
+                    { loader: 'html-loader' },
+                    { loader: path.resolve('./markdown-blogpost-loader.js') }
                 ]
-            }
+            },
         ]
     },
     resolve: { extensions: ["*", ".js", ".jsx"] },
@@ -43,7 +42,6 @@ module.exports = {
         publicPath: "/dist/",
         filename: "bundle.js"
     },
-    devtool: 'inline-source-map',
     devServer: {
         contentBase: path.join(__dirname, "public/"),
         port: 3000,
@@ -51,5 +49,6 @@ module.exports = {
         hotOnly: true,
         open: true
     },
+    devtool: 'inline-source-map',
     plugins: [new webpack.HotModuleReplacementPlugin()]
 };
