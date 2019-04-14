@@ -10,6 +10,8 @@ const between = (str, start, end) =>
 
 
 module.exports = function (markdown) {
+    const options = loaderUtils.getOptions(this);
+
     let md_metadata = markdown.split('----')[1]
     let md_content = marked(markdown.split('----')[2])
 
@@ -20,17 +22,23 @@ module.exports = function (markdown) {
     
     //adds images which are referred to in markdown to webpack dependency graph without having to import in js file
     // NOTE: currently assumes all <img> tags in markdown have an alt attribute and that webpack output path is 'dist'
-    let file = between(md_content, "<img src='/dist/","' alt=")
+    let file = between(md_content, "<img src='/","' alt=")
     if(file) {
         let file_content = fs.readFileSync(file)
         this.emitFile(file, file_content)
+
+        if(options.isDevelopment) {
+            let str = md_content.split("<img src='/")
+            md_content = str[0] + "<img src='/dist/" + str[1]
+        }
     }
 
     let obj = {
         content: md_content,
         title: title,
         tags: tags,
-        date: date
+        date: date,
+        test: options
     }
     return JSON.stringify(obj);
 };

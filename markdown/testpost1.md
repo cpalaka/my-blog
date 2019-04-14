@@ -12,4 +12,4 @@ date: 04/13/2019
     * THREE
 
 testing a picture:
-<img src='/dist/images/atsdhmg8by811.png' alt='pic'></img>
+<img src='/images/atsdhmg8by811.png' alt='pic'></img>

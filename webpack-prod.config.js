@@ -33,7 +33,10 @@ module.exports = {
                 test: /\.md$/,
                 use: [
                     { loader: 'html-loader'},
-                    { loader: path.resolve('./markdown-blogpost-loader.js')}
+                    { 
+                        loader: path.resolve('./markdown-blogpost-loader.js'),
+                        options: { isDevelopment: false}
+                    }
                 ]
             }
         ]
