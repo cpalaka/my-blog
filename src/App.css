@@ -1,4 +1,31 @@
-.App {
-    margin: 1rem;
+.app {
+    height: 100%;
+    width: 100%;
     font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: row;
+}
+
+.sapphire {
+    background-color: #11557f;
+}
+
+.cadet {
+    background-color: #5c9ead;
+}
+
+.white {
+    background-color: #ffffff;
+}
+
+.isabelline {
+    background-color: #eeeeee;
+}
+
+.middlered {
+    background-color: #e39774;
+}
+
+body {
+    margin: 0;
 }

@@ -36,7 +36,7 @@ module.exports = {
                         options: {isDevelopment: true}
                     }
                 ]
-            },
+            }
         ]
     },
     resolve: { extensions: ["*", ".js", ".jsx"] },

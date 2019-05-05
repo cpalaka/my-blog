@@ -19,18 +19,6 @@ var staticHostParams = {
     }
 };
 
-// set the new website configuration on the selected bucket
-// NOTE: already configured
-// s3.putBucketWebsite(staticHostParams, function (err, data) {
-//     if (err) {
-//         // display error message
-//         console.log("Error", err);
-//     } else {
-//         // update the displayed website configuration for the selected bucket
-//         console.log("Success", data);
-//     }
-// });
-
 let folderToUpload = 'dist'
 let files = []
 
@@ -49,7 +37,7 @@ files.forEach((file) => {
         console.log('File Error', err)
     })
     uploadParams.Body = fileStream
-    uploadParams.Key = file.substring(5).split('.')[0]
+    uploadParams.Key = file.substring(5)
 
     s3.upload(uploadParams, function (err, data) {
         if (err) {

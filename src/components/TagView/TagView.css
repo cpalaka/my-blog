@@ -1,0 +1,10 @@
+.tag {
+    border: 1px solid white;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0.2em;
+}
+
+.tag:hover {
+    background-color: white;
+}

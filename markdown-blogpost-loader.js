@@ -37,8 +37,7 @@ module.exports = function (markdown) {
         content: md_content,
         title: title,
         tags: tags,
-        date: date,
-        test: options
+        date: date
     }
     return JSON.stringify(obj);
 };
