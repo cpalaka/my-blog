@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import { hot } from "react-hot-loader";
 import { Route, Switch } from 'react-router'
-import { BrowserRouter, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Link } from 'react-router-dom'
 import Sidebar from './components/Sidebar'
 import BlogPage from './components/BlogPage'
 import AboutPage from './components/AboutPage'
@@ -9,7 +9,7 @@ import "./App.css";
 
 const App = (props) => {
     return (
-        <BrowserRouter>
+        <Router>
             <div className='app isabelline'>
                 <Sidebar />
                 <Switch>
@@ -24,7 +24,7 @@ const App = (props) => {
                     />
                 </Switch>
             </div>
-        </BrowserRouter>
+        </Router>
     )
 }
 

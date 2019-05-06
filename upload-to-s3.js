@@ -6,19 +6,6 @@ AWS.config.update({ region: 'us-east-1' })
 // Create S3 service object
 s3 = new AWS.S3({ apiVersion: '2006-03-01' });
 
-// Create JSON for putBucketWebsite parameters
-var staticHostParams = {
-    Bucket: 'chaisblogsite',
-    WebsiteConfiguration: {
-        ErrorDocument: {
-            Key: 'error.html'
-        },
-        IndexDocument: {
-            Suffix: 'index.html'
-        },
-    }
-};
-
 let folderToUpload = 'dist'
 let files = []
 
@@ -31,7 +18,7 @@ recurseDir(folderToUpload)
 // upload each file in files list, keeping intact the subfolder structure
 files.forEach((file) => {
     var fileStream = fs.createReadStream(file)
-    var uploadParams = { Bucket: 'chaisblogsite', Key: '', Body: '' }
+    var uploadParams = { Bucket: 'chai-test-blog-1', Key: '', Body: '' }
 
     fileStream.on('error', function (err) {
         console.log('File Error', err)
