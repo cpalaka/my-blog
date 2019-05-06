@@ -1,30 +1,25 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { PostsContext } from '../BlogPage'
 import './TagView.css'
 
 const TagView = (props) => {
     // console.log(props)
-    const toggleTag = (tag) => {
-        // console.log(tag)
-        props.setState(prevState => {
-            const modPosts = prevState.posts.map(p => 
-                p.tags.includes(tag)
-                ? ({
-                    ...p,
-                    display: false
-                })
-                : p
-                // console.log(p)
-            )
-            console.log(modPosts)
-            return (prevState
-
-            )
-        })
-    }
+    const { 
+        state: { 
+            allposts: allposts,
+            tags: tags 
+        },
+        dispatch: dispatch
+    } = useContext(PostsContext)
 
     return (
-        props.tags.map(tag => 
-            <div className='tag' key={tag} onClick={e => toggleTag(tag)} >{tag}</div>
+        tags.map(tag => 
+            <div 
+                className={tag.isSelected ? 'tag cadet' : 'tag'} 
+                key={tag.name} 
+                onClick={e => dispatch({ type: 'select_tag', tag: tag.name})} >
+                    {tag.name}
+            </div>
         )
     )
 }

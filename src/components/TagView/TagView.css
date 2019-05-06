@@ -5,6 +5,10 @@
     margin: 0.2em;
 }
 
+/* .tag-sel {
+    background-color: blue;
+} */
+
 .tag:hover {
     background-color: white;
 }

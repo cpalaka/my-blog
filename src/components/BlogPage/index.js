@@ -5,17 +5,19 @@ import TagView from '../TagView'
 import BlogContainer from '../BlogContainer'
 import './BlogPage.css'
 
+export const PostsContext = React.createContext(null)
+
 const BlogPage = (props) => {
     return (
         <div className="blog-page">
             <h1>Home page</h1>
             <Link to='about'>To About</Link>
             <BlogContainer>
-                {(state, setState) =>
-                    <>
-                        <TagView {...state} setState={setState} />
-                        <PostView {...state} setState={setState} />
-                    </>
+                {(state, dispatch) =>
+                    <PostsContext.Provider value={{state, dispatch}}>
+                        <TagView />
+                        <PostView />
+                    </PostsContext.Provider>
                 }
             </BlogContainer>
         </div>)

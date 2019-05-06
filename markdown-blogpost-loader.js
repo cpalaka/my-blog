@@ -16,7 +16,7 @@ module.exports = function (markdown) {
     let md_content = marked(markdown.split('----')[2])
 
     let metadata = md_metadata.split('\n').filter(i=>i!=="")
-    let tags = metadata.find(el=>el.includes("tags")).split(': ')[1].split(',')
+    let tags = metadata.find(el=>el.includes("tags")).split(': ')[1].split(',').map(t=>t.trim())
     let title = metadata.find(el=>el.includes("title")).split(': ')[1]
     let date = metadata.find(el=>el.includes("date")).split(': ')[1]
     

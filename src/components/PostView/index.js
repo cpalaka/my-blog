@@ -1,10 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { PostsContext } from '../BlogPage'
 import BlogPost from '../BlogPost'
 
 const PostView = (props) => {
-    console.log(props)
+    const {
+        state: { 
+            allposts: allposts,
+            selposts: selposts,
+            tags: tags 
+        },
+        dispatch: dispatch
+    } = useContext(PostsContext)
+    const posts = selposts.length === 0 ? allposts : selposts
     return (
-        props.posts.map(post => <BlogPost {...post} key={post.title} />)
+        posts.map(post => <BlogPost {...post} key={post.title} />)
     )
 }
 
