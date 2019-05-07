@@ -2,6 +2,7 @@
 title: example Post 1
 tags: test, firstpost, blog
 date: 04/09/2019
+url: example-post-1
 ----
 Heading
 =======

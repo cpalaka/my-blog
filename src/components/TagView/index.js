@@ -4,23 +4,26 @@ import './TagView.css'
 
 const TagView = (props) => {
     // console.log(props)
-    const { 
-        state: { 
+    const {
+        state: {
             allposts: allposts,
-            tags: tags 
+            tags: tags
         },
         dispatch: dispatch
     } = useContext(PostsContext)
 
     return (
-        tags.map(tag => 
-            <div 
-                className={tag.isSelected ? 'tag cadet' : 'tag'} 
-                key={tag.name} 
-                onClick={e => dispatch({ type: 'select_tag', tag: tag.name})} >
-                    {tag.name}
-            </div>
-        )
+        <div className="tag-view">
+            {tags.map(tag =>
+                <div
+                    className={tag.isSelected ? 'tag cadet' : 'tag'}
+                    key={tag.name}
+                    onClick={e => dispatch({ type: 'select_tag', tag: tag.name })} >
+                        <div>{tag.name}</div>
+                        <div>{tag.count}</div>
+                </div>
+            )}
+        </div>
     )
 }
 

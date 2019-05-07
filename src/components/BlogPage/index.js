@@ -15,8 +15,10 @@ const BlogPage = (props) => {
             <BlogContainer>
                 {(state, dispatch) =>
                     <PostsContext.Provider value={{state, dispatch}}>
-                        <TagView />
-                        <PostView />
+                        <div className="blog-page-content">
+                            <PostView />
+                            <TagView />
+                        </div>
                     </PostsContext.Provider>
                 }
             </BlogContainer>

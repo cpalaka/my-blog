@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { PostsContext } from '../BlogPage'
 import BlogPost from '../BlogPost'
-
+import './PostView.css'
 const PostView = (props) => {
     const {
         state: { 
@@ -11,9 +11,12 @@ const PostView = (props) => {
         },
         dispatch: dispatch
     } = useContext(PostsContext)
+    // console.log(allposts)
     const posts = selposts.length === 0 ? allposts : selposts
     return (
-        posts.map(post => <BlogPost {...post} key={post.title} />)
+        <div className='post-view'>
+            {posts.map(post => <BlogPost {...post} key={post.title} />)}
+        </div>
     )
 }
 

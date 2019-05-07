@@ -19,6 +19,7 @@ module.exports = function (markdown) {
     let tags = metadata.find(el=>el.includes("tags")).split(': ')[1].split(',').map(t=>t.trim())
     let title = metadata.find(el=>el.includes("title")).split(': ')[1]
     let date = metadata.find(el=>el.includes("date")).split(': ')[1]
+    let url = metadata.find(el=>el.includes("url")).split(': ')[1]
     
     //adds images which are referred to in markdown to webpack dependency graph without having to import in js file
     // NOTE: currently assumes all <img> tags in markdown have an alt attribute and that webpack output path is 'dist'
@@ -37,7 +38,8 @@ module.exports = function (markdown) {
         content: md_content,
         title: title,
         tags: tags,
-        date: date
+        date: date,
+        url: url
     }
     return JSON.stringify(obj);
 };

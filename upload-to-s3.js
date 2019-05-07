@@ -18,13 +18,23 @@ recurseDir(folderToUpload)
 // upload each file in files list, keeping intact the subfolder structure
 files.forEach((file) => {
     var fileStream = fs.createReadStream(file)
-    var uploadParams = { Bucket: 'chai-test-blog-1', Key: '', Body: '' }
+    var uploadParams = { Bucket: 'chaisblogsite', Key: '', Body: '' }
+    const fileName = file.substring(5)
 
     fileStream.on('error', function (err) {
         console.log('File Error', err)
     })
     uploadParams.Body = fileStream
-    uploadParams.Key = file.substring(5)
+    uploadParams.Key = fileName
+
+    //TODO: set content type for all files based on extension
+    if(fileName === 'index.html') {
+        uploadParams.ContentType = "text/html"
+    }
+
+    if(fileName === 'bundle.js') {
+        uploadParams.ContentType = "text/javascript"
+    }
 
     s3.upload(uploadParams, function (err, data) {
         if (err) {
@@ -34,3 +44,21 @@ files.forEach((file) => {
         }
     })
 })
+
+var site_params = {
+    Bucket: "chaisblogsite",
+    ContentMD5: "",
+    WebsiteConfiguration: {
+        ErrorDocument: {
+            Key: "index.html"
+        },
+        IndexDocument: {
+            Suffix: "index.html"
+        }
+    }
+};
+
+s3.putBucketWebsite(site_params, function(err, data) {
+    if (err) console.log(err, err.stack); // an error occurred
+    else     console.log('site setup success',data);           // successful response
+  });

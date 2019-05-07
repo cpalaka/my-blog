@@ -1,4 +1,11 @@
 .blog-post {
     border: 1px solid black;
     margin: 1em;
+    width: 75%;
+    margin: auto;
+}
+
+.blog-post img {
+    width: 50%;
+    margin: auto;
 }

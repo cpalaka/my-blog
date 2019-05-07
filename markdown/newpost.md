@@ -1,11 +1,11 @@
 ----
-title: test post 1
-tags: test, secondpost, blog, nthpost
-date: 04/13/2019
-url: blog-post-test
+title: Dayne test post
+tags: test, dayne, blog
+date: 05/06/2019
+url: url-testing-1
 ----
 
-# A second post? lol
+# Nother post
 
 ## heres a list
     * 1
