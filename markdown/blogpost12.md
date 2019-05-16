@@ -1,9 +1,9 @@
-----
+~~~**~~~
 title: testing post 1
 tags: test34, nthpost, blog
 date: 05/04/2019
 url: url-testing
-----
+~~~**~~~
 
 # Just testing node shit
 

@@ -12,8 +12,8 @@ const between = (str, start, end) =>
 module.exports = function (markdown) {
     const options = loaderUtils.getOptions(this);
 
-    let md_metadata = markdown.split('----')[1]
-    let md_content = marked(markdown.split('----')[2])
+    let md_metadata = markdown.split('~~~**~~~')[1]
+    let md_content = marked(markdown.split('~~~**~~~')[2])
 
     let metadata = md_metadata.split('\n').filter(i=>i!=="")
     let tags = metadata.find(el=>el.includes("tags")).split(': ')[1].split(',').map(t=>t.trim())

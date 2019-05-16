@@ -1,9 +1,9 @@
-----
+~~~**~~~
 title: Dayne test post
 tags: test, dayne, blog
 date: 05/06/2019
 url: url-testing-1
-----
+~~~**~~~
 
 # Nother post
 

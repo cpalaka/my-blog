@@ -1,9 +1,9 @@
-----
+~~~**~~~
 title: test post 1
 tags: test, secondpost, blog, nthpost
 date: 04/13/2019
 url: blog-post-test
-----
+~~~**~~~
 
 # A second post? lol
 
