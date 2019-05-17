@@ -23,21 +23,27 @@ const App = (props) => {
                         component={BlogPage}
                     />
                     <Route
+                        exact
                         path="/about"
                         component={AboutPage}
                     />
                     {/* TODO : clean up routes */}
                     {posts.map(p =>
                         <Route
+                            exact
                             path={'/blog/' + p.url}
                             key={p.url}
-                            render={props => <BlogPost {...p} />}
+                            render={props => <BlogPost {...p}  />}
                         />
                     )}
+                    {/* on error */}
+                    <Route component={Error} />
                 </Switch>
             </div>
         </Router>
     )
 }
+
+const Error = (props) => <h1>404 GTFO</h1>
 
 export default hot(module)(App);
