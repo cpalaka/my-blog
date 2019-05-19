@@ -44,7 +44,8 @@ module.exports = {
     resolve: { extensions: ["*", ".js", ".jsx"] },
     output: {
         path: path.resolve(__dirname, "dist/"),
-        filename: "bundle.js"
+        filename: "bundle.js",
+        publicPath: "/"
     },
     plugins: [new HtmlWebpackPlugin({ template: 'public/prod-index.html' })]
 };

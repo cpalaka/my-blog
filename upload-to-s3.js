@@ -11,7 +11,10 @@ let files = []
 
 // recursively iterate through /dist folder and collect files in list
 const recurseDir = (dir) =>
-    fs.readdirSync(dir).forEach((file) => fs.statSync(dir + '/' + file).isDirectory() ? recurseDir(dir + '/' + file) : files.push(dir + '/' + file))
+    fs.readdirSync(dir).forEach(
+            (file) => fs.statSync(dir + '/' + file).isDirectory() 
+                        ? recurseDir(dir + '/' + file) 
+                        : files.push(dir + '/' + file))
 
 recurseDir(folderToUpload)
 
@@ -30,10 +33,12 @@ files.forEach((file) => {
     //TODO: set content type for all files based on extension
     if(fileName === 'index.html') {
         uploadParams.ContentType = "text/html"
+        uploadParams.CacheControl = "max-age=0"
     }
 
     if(fileName === 'bundle.js') {
         uploadParams.ContentType = "text/javascript"
+        uploadParams.CacheControl = "max-age=0"
     }
 
     s3.upload(uploadParams, function (err, data) {
