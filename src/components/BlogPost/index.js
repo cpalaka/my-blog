@@ -1,16 +1,19 @@
 import React, { useState }  from 'react'
 import { Link } from 'react-router-dom'
+import JiggleDiv from '../JiggleDiv'
 import './BlogPost.css'
 
 const BlogPost = (props) => {
     // console.log('date',new Date(props.date).toString())
-    const [ isFullPost, toggleIsFullPost ] = useState(true)
+    const [ isFullPost, toggleIsFullPost ] = useState(false)
 
     return (
         isFullPost ?
             <div className='blog-post'>
                 <Link to={'blog/' + props.url }><h1>{props.title}</h1></Link>
-                <div className={'post-button '+ (isFullPost ? 'white' : 'sapphire')} onClick={()=>toggleIsFullPost(s=> !s)} />
+                {/* <JiggleDiv> */}
+                    <div className={'post-button '+ (isFullPost ? 'white' : 'sapphire')} onClick={()=>toggleIsFullPost(s=> !s)} />
+                {/* </JiggleDiv> */}
                 {/* <h1>{props.title}</h1> */}
                 <p>{props.date}</p>
                 <div dangerouslySetInnerHTML={{__html: props.content}} />
@@ -21,7 +24,9 @@ const BlogPost = (props) => {
         <div className='hidden-post'>
             <p>{props.date}</p>
             <h1>{props.title}</h1>
+            {/* <JiggleDiv> */}
             <div className={'post-button '+ (isFullPost ? 'white' : 'sapphire')} onClick={()=>toggleIsFullPost(s=> !s)} />
+            {/* </JiggleDiv> */}
         </div>
     )
 }

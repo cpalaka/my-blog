@@ -1,0 +1,24 @@
+.jiggle-container {
+    width: 100%;
+    height: 200px;
+    background-color: orange;
+
+}
+
+.jiggle-div {
+    position: relative;
+    width: 95%;
+    height: 180px;
+    background-color: blue;
+    margin: auto;
+    /* z-index: 1; */
+}
+
+.overlay-div {
+    width: 100%;
+    height: 100%;
+    /* z-index: 10; */
+    opacity: 0%;
+    position: relative;
+    top: -180px;
+}

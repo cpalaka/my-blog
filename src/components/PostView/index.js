@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { PostsContext } from '../BlogPage'
 import BlogPost from '../BlogPost'
+import JiggleDiv from '../JiggleDiv'
 import './PostView.css'
 const PostView = (props) => {
     const {
@@ -15,7 +16,11 @@ const PostView = (props) => {
     const posts = selposts.length === 0 ? allposts : selposts
     return (
         <div className='post-view'>
-            {posts.map(post => <BlogPost {...post} key={post.title} />)}
+            {posts.map(post =>
+                <JiggleDiv key={post.title}>
+                    <BlogPost {...post} key={post.title} />
+                </JiggleDiv>
+                )}
         </div>
     )
 }
