@@ -1,0 +1,50 @@
+.tag {
+    border: 1px solid white;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0.2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.tag-view {
+    display: flex;
+    flex-direction: column;
+}
+
+.tag:hover {
+    background-color: white;
+}
+
+.filter-view {
+    width: 25%;
+    position: fixed;
+    right: 0px;
+    
+    height: 300px;
+    background-color: black;
+    transition: top 1s;
+}
+
+.show {
+    top:0px;
+}
+
+.hide {
+    top: -270px;
+}
+
+/* .filter-view:active {
+    t
+} */
+
+.filter-body {
+    height: 90%;
+    background-color: red;
+}
+
+.filter-toggle {
+    background-color: green;
+    height: 10%;
+}

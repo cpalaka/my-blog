@@ -1,7 +1,9 @@
 .post-view {
     overflow: auto;
     height: auto;
-    padding: .5rem;
+    /* padding: .5rem; */
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: none;
+    width: 95%;
+    margin: auto;
 }

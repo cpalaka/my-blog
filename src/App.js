@@ -1,6 +1,6 @@
 import React from "react";
 import { hot } from "react-hot-loader";
-import { Route, Switch } from 'react-router'
+import { Route, Switch, Redirect } from 'react-router'
 import { BrowserRouter as Router, Link } from 'react-router-dom'
 import Sidebar from './components/Sidebar'
 import BlogPage from './components/BlogPage'
@@ -12,15 +12,21 @@ import "./App.css";
 const posts = rawPosts.map(post => JSON.parse(post))
 
 const App = (props) => {
+    console.log(props)
     return (
         <Router>
-            <div className='app isabelline'>
+            <div className='app'>
                 <Sidebar />
                 <Switch>
                     <Route
                         path="/"
                         exact
                         component={BlogPage}
+                    />
+                    <Route
+                        path="/blog"
+                        exact
+                        render={() => <Redirect to="/" />}
                     />
                     <Route
                         exact
@@ -33,14 +39,14 @@ const App = (props) => {
                             exact
                             path={'/blog/' + p.url}
                             key={p.url}
-                            render={props => <BlogPost {...p}  />}
+                            render={props => <BlogPost {...p} />}
                         />
                     )}
                     {/* on error */}
                     <Route component={Error} />
                 </Switch>
             </div>
-        </Router>
+        </Router >
     )
 }
 

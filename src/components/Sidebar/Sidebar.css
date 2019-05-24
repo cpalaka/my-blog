@@ -1,5 +1,18 @@
 .side-bar {
-    background-color: blue;
-    width: 30px;
-    height: 100%;
+    width: 25%;
+    height: 100vh;
+}
+
+.nav-square {
+    position: relative;
+    top: 10px;
+    width: 95%;
+    margin: auto;
+    background-color: aquamarine;
+}
+
+@media (max-width: 991px) {
+    .side-bar {
+        width: 0px;
+    }
 }

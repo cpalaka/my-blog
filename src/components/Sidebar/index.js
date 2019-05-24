@@ -1,9 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
+import { withRouter } from 'react-router'
 import './Sidebar.css'
 
-const Sidebar = (props) =>
-    <div className="side-bar sapphire">
-        
-    </div>
+const Sidebar = (props) => {
+    console.log(props)
+    return (
+        <div className="side-bar">
+            <div className="nav-square">
+                <div>SITE TITLE</div>
+                <Link to="/about" >ABOUT ME</Link>
+            </div>
 
-export default Sidebar
+        </div>
+    )
+}
+
+export default withRouter(Sidebar)

@@ -1,11 +1,32 @@
 .blog-post {
-    border: 1px solid black;
-    margin: 1em;
-    width: 75%;
-    margin: auto;
+    /* border: 1px solid black; */
+    /* margin: 1em; */
+    margin-bottom: 10px;
+    width: 100%;
+    background-color: #eeeeee;
+    /* margin: auto; */
+    padding: 1em;
 }
 
 .blog-post img {
     width: 50%;
     margin: auto;
+}
+
+.hidden-post {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.post-button {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.post-button:hover {
+    background-color:#5c9ead;
+    cursor: pointer;
 }
