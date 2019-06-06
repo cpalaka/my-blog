@@ -1,5 +1,5 @@
 .post-view {
-    overflow: auto;
+    /* overflow: auto; */
     height: auto;
     /* padding: .5rem; */
     -webkit-overflow-scrolling: touch;

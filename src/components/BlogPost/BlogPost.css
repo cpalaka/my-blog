@@ -5,9 +5,12 @@
     width: 100%;
     background-color: #eeeeee;
     /* margin: auto; */
-    padding: 1em;
+    /* padding: 1em; */
 }
 
+.inner-blog{
+    padding: 1em;
+}
 .blog-post img {
     width: 50%;
     margin: auto;

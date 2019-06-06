@@ -17,10 +17,8 @@ const PostView = (props) => {
     return (
         <div className='post-view'>
             {posts.map(post =>
-                <JiggleDiv key={post.title}>
-                    <BlogPost {...post} key={post.title} />
-                </JiggleDiv>
-                )}
+                <BlogPost {...post} key={post.title} />
+            )}
         </div>
     )
 }
