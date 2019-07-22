@@ -12,7 +12,6 @@ import "./App.css";
 const posts = rawPosts.map(post => JSON.parse(post))
 
 const App = (props) => {
-    console.log(props)
     return (
         <Router>
             <div className='app'>
@@ -26,7 +25,7 @@ const App = (props) => {
                     <Route
                         path="/blog"
                         exact
-                        render={() => <Redirect to="/" />}
+                        component={BlogPage}
                     />
                     <Route
                         exact

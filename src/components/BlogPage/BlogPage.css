@@ -8,16 +8,8 @@
 }
 
 .blog-page-content {
-    /* display: flex;
-    flex-direction: row; */
-    /* background-color: blue; */
-    /* display: flex; */
     overflow: auto; 
     height: 100vh;
-
-    /* position: relative;
-    width: 100%; */
-
     backface-visibility: hidden;
     will-change: overflow;
 }

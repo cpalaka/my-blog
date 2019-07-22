@@ -1,29 +1,23 @@
-import React, { useState }  from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import JiggleDiv from '../JiggleDiv'
+import Tag from '../Tag'
 import './BlogPost.css'
 
 const BlogPost = (props) => {
-    // console.log('date',new Date(props.date).toString())
-    const [ isFullPost, toggleIsFullPost ] = useState(true)
-
+    console.log(props)
     return (
-        isFullPost ?
-            <div className='blog-post'>
-                <div className="inner-blog">
-                <Link to={'blog/' + props.url }><h1>{props.title}</h1></Link>
-                    <div className={'post-button '+ (isFullPost ? 'white' : 'sapphire')} onClick={()=>toggleIsFullPost(s=> !s)} />
-                <p>{props.date}</p>
-                <div dangerouslySetInnerHTML={{__html: props.content}} />
-                {props.tags.map(t => 
-                    <p style={{ display: 'inline-block', margin: '5px'}} key={t}>{t}</p>)}
-                </div>
+        <div className='blog-post'>
+            <div className="blog-date">{props.date}</div>
+            <div className='blog-header'>
+                <div className="blog-title">{props.title}</div>
+                <div className="blog-tags">{props.tags.map(t => <Tag tagName={t} key={t}>{t}</Tag>)}</div>
             </div>
-        :
-        <div className='hidden-post'>
-            <p>{props.date}</p>
-            <h1>{props.title}</h1>
-            <div className={'post-button '+ (isFullPost ? 'white' : 'sapphire')} onClick={()=>toggleIsFullPost(s=> !s)} />
+            <div className="inner-blog">
+                {/* <Link to={'blog/' + props.url}></Link> */}
+                <div dangerouslySetInnerHTML={{ __html: props.content }} />
+            </div>
+            <div className="full-post-link"></div>
         </div>
     )
 }

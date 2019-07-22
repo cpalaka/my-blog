@@ -1,0 +1,13 @@
+.Tag {
+    border: 1px solid black;
+    border-radius: 20px;
+    display: inline-block;
+    padding: 5px;
+    margin: 2px;
+    font-size: 10px;
+}
+
+.Tag:hover {
+    background-color: black;
+    cursor: pointer;
+}
