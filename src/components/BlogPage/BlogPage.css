@@ -3,13 +3,13 @@
     left: 0px;
     width: 50%;
     /* margin: auto; */
-    background-color:  #e39774;
+    /* background-color:  #e39774; */
     /* margin: 2em 5em; */
 }
 
 .blog-page-content {
-    overflow: auto; 
+    /* overflow: auto; 
     height: 100vh;
     backface-visibility: hidden;
-    will-change: overflow;
+    will-change: overflow; */
 }

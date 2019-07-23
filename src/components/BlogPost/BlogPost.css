@@ -3,11 +3,23 @@
     /* margin: 1em; */
     margin-bottom: 10px;
     width: 100%;
-    background-color: #eeeeee;
+    /* background-color: #eeeeee; */
+    position: relative;
     /* margin: auto; */
     /* padding: 1em; */
+    
+    overflow: hidden;
+    transition: transform 0.5s;
+    transform: scale(1);
 
+    /* border: 1px solid grey; */
+}
 
+.blog-post:hover {
+    transition: all 0.35s;
+    /* width: 105%;
+    height: 105%; */
+    transform: scale(1.04);
 }
 
 .blog-title {
@@ -28,11 +40,19 @@
 }
 
 .full-post-link {
-    height: 50px;
-    position: absolute;
-    bottom: 50px;
+    height: 100px;
+    /* width:50%; */
+    position: relative;
+    /* bottom: 50px; */
+    opacity: 0.8;
     background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(121,121,121,1) 100%);
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(235,235,235,1) 100%); 
+}
+
+.full-post-link:hover {
+    cursor: pointer;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(226,226,226,1) 100%); 
 }
 
 .blog-header {
@@ -44,8 +64,7 @@
 
 .inner-blog{
     padding: 0px 10px ;
-    height: 300px;
-    overflow: hidden;
+    max-height: 250px;
 }
 
 .inner-blog h1 {
