@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { PostsContext } from '../BlogPage'
+import Tag from '../Tag'
 import './FilterView.css'
 
 const FilterView = (props) => {
@@ -13,9 +14,9 @@ const FilterView = (props) => {
         },
         dispatch: dispatch
     } = useContext(PostsContext)
-
+    console.log('tags',tags)
     return (
-        <div className={`filter-view ${showFilter ? 'show' : 'hide'}`}>
+        <div className='filter-view'>
             {/* {tags.map(tag =>
                 <div
                     className={tag.isSelected ? 'tag cadet' : 'tag'}
@@ -25,8 +26,12 @@ const FilterView = (props) => {
                         <div>{tag.count}</div>
                 </div>
             )} */}
-            <div className='filter-body' />
-            <div className='filter-toggle' onClick={()=>setShowFilter(prev => !prev)}/>
+            {/* <div className='filter-body' />
+            <div className='filter-toggle' onClick={()=>setShowFilter(prev => !prev)}/> */}
+
+            <div className="filter-tags">
+                {tags.map(tag => <Tag {...tag} key={tag.name}>{tag}</Tag>)}
+            </div>
         </div>
     )
 }

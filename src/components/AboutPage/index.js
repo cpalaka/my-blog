@@ -4,7 +4,7 @@ import './AboutPage.css'
 
 const AboutPage = (props) =>
     <div className="">
-        <h1>About page</h1><Link to='/'>To Blog</Link>
+        <h1>About page</h1><Link to='/blog'>To Blog</Link>
     </div>
 
 export default AboutPage

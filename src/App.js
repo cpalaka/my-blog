@@ -4,6 +4,7 @@ import { Route, Switch, Redirect } from 'react-router'
 import { BrowserRouter as Router, Link } from 'react-router-dom'
 import Sidebar from './components/Sidebar'
 import BlogPage from './components/BlogPage'
+import HomePage from './components/HomePage'
 import BlogPost from './components/BlogPost'
 import AboutPage from './components/AboutPage'
 import rawPosts from '../markdown'
@@ -15,12 +16,12 @@ const App = (props) => {
     return (
         <Router>
             <div className='app'>
-                <Sidebar />
+                {/* <Sidebar /> */}
                 <Switch>
                     <Route
                         path="/"
                         exact
-                        component={BlogPage}
+                        component={HomePage}
                     />
                     <Route
                         path="/blog"

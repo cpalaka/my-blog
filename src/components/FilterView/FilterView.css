@@ -1,19 +1,22 @@
 .filter-view {
     width: 25%;
+    height: 30%;
+
     position: fixed;
-    right: 0px;
+    right: 10px;
+    top: 10px;
     
-    height: 300px;
-    background-color: black;
-    transition: top 1s;
+    /* background-color: black; */
 }
 
 .show {
     top:0px;
+    transition: top 1s;
 }
 
 .hide {
     top: -270px;
+    transition: top 1s;
 }
 
 /* .filter-view:active {

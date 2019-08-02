@@ -7,15 +7,11 @@
     overflow: hidden;
 } */
 .app {
-    display: flex;
-    flex-direction: row;
-    overflow: hidden;
-    /* height: 100vh; */
-    position: relative;
-    /* width: 100%; */
-    backface-visibility: hidden;
-    will-change: overflow;
+    height: 100%;
+    /* position: relative; */
+    width: 100%;
     font-family: "PT Serif", Georgia, serif;
+    /* background-color: #5c9ead; */
 }
 
 #root {

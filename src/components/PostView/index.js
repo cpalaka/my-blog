@@ -14,6 +14,7 @@ const PostView = (props) => {
     } = useContext(PostsContext)
     // console.log(allposts)
     const posts = selposts.length === 0 ? allposts : selposts
+    console.log(posts)
     return (
         <div className='post-view'>
             {posts.map(post =>

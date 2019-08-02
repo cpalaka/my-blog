@@ -11,7 +11,7 @@ const BlogPost = (props) => {
             <div className="blog-date">{props.date}</div>
             <div className='blog-header'>
                 <div className="blog-title">{props.title}</div>
-                <div className="blog-tags">{props.tags.map(t => <Tag tagName={t} key={t}>{t}</Tag>)}</div>
+                <div className="blog-tags">{props.tags.map(t => <Tag name={t} key={t}>{t}</Tag>)}</div>
             </div>
             <div className="inner-blog">
                 {/* <Link to={'blog/' + props.url}></Link> */}

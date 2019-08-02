@@ -1,0 +1,35 @@
+.home-page {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.home-page .content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+}
+
+.home-page .name {
+    font-size:42px;
+    font-family: "Roboto Mono", Arial, Helvetica, sans-serif;
+    /* font-weight: bold; */
+    margin: 0.5em 0;
+    white-space: nowrap;
+}   
+
+.social-links {
+    display: flex;
+    justify-content: space-around;
+}
+
+.home-page .link {
+
+}
+
+.home-page .logo {
+    width: 1.5em;
+    height: 1.5em;
+}
