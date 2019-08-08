@@ -10,13 +10,21 @@
     height: 100%;
     /* position: relative; */
     width: 100%;
-    font-family: "PT Serif", Georgia, serif;
-    /* background-color: #5c9ead; */
+    font-family: "Roboto Mono", stack-mono, monospace;
+    background-color: #f5f5f5;
 }
 
 #root {
     position: relative;
     top: 0px;
+}
+
+.hoverable-show {
+    display: inline-block;
+}
+
+.hoverable-hide {
+    display: none;
 }
 
 .sapphire {
