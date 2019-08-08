@@ -1,77 +1,46 @@
 .blog-post {
-    /* border: 1px solid black; */
-    /* margin: 1em; */
-    margin-bottom: 10px;
-    width: 100%;
-    /* background-color: #eeeeee; */
-    position: relative;
-    /* margin: auto; */
-    /* padding: 1em; */
-    
-    overflow: hidden;
-    transition: transform 0.5s;
-    transform: scale(1);
-
-    /* border: 1px solid grey; */
+    margin-bottom: 1em;
 }
 
-.blog-post:hover {
-    transition: all 0.35s;
-    /* width: 105%;
-    height: 105%; */
-    transform: scale(1.04);
-}
-
-.blog-title {
-    font-style: italic;
-    font-weight: bold;
-    font-size: 22px;
-}
-
-.blog-date {
-    position: relative;
-    display: inline-block;
-    font-size: 12px;
-}
-
-.blog-tags {
-    position: relative;
-    right: 0px;
-}
-
-.full-post-link {
-    height: 100px;
-    /* width:50%; */
-    position: relative;
-    /* bottom: 50px; */
-    opacity: 0.8;
-    background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(235,235,235,1) 100%); 
-}
-
-.full-post-link:hover {
-    cursor: pointer;
-    background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(226,226,226,1) 100%); 
-}
-
-.blog-header {
+.blog-post .header {
     display: flex;
-    align-content: space-between;
-    align-items: flex-end;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    cursor: pointer;
 }
 
-.inner-blog{
-    padding: 0px 10px ;
-    max-height: 250px;
+.blog-post .title {
+    font-size: 18px;
+    /* font-style: oblique;
+    font-weight: bold; */
 }
 
-.inner-blog h1 {
+.blog-post .showmore {
+    left: 0%;
     font-size: 20px;
+    position: absolute;
+    cursor: pointer;
 }
 
-.blog-post img {
-    width: 50%;
-    margin: auto;
+
+.blog-post .post-preview img{
+    max-width: 50%;
+}
+
+.blog-post .post-preview.hide {
+    transition: all 1s;
+    height: 0px;
+}
+
+.blog-post .post-preview.show {
+    transition: all 1s;
+    height: 300px;
+}
+
+.blog-post .post-preview {
+    max-height: 300px;
+    overflow: hidden;
+}
+
+.blog-post .tags {
+    font-size: 12px;
 }
