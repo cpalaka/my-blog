@@ -5,7 +5,7 @@ import linkedinlogo from '../../../images/linkedin-logo.svg'
 import twitterlogo from '../../../images/twitter-logo.svg'
 import emaillogo from '../../../images/email-logo.svg'
 import JiggleDiv from '../utils/JiggleDiv'
-import Hoverable from '../utils/Hoverable'
+
 import './HomePage.css'
 
 const HomePage = (props) => {
@@ -22,24 +22,7 @@ const HomePage = (props) => {
                     </div> */}
             </div>
             {/* </JiggleDiv> */}
-            <div className='sitelinks'>
-                <Hoverable>
-                    {hovered => 
-                        <>
-                            <div className={`box ${hovered ? 'hoverable-show' : 'hoverable-hide'}`}></div>
-                            <Link to='/blog' style={{ textDecoration: 'none' }}>Blog</Link>
-                        </>
-                    }
-                </Hoverable>
-                <Hoverable>
-                    {hovered => 
-                        <>
-                            <div className={`box ${hovered ? 'hoverable-show' : 'hoverable-hide'}`}></div>
-                            <Link to='/about' style={{ textDecoration: 'none' }}>Me</Link>
-                        </>
-                    }
-                </Hoverable>
-            </div>
+            
         </div>
     )
 }

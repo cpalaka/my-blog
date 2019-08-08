@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import JiggleDiv from '../JiggleDiv'
 import Tag from '../Tag'
-import './BlogPost.css'
+import Hoverable from '../utils/Hoverable'
+// import './BlogPost.css'
+import './BlogPost1.css'
 
-const BlogPost = (props) => {
+const BlogPost1 = (props) => {
     console.log(props)
     return (
         <div className='blog-post'>
@@ -21,5 +22,18 @@ const BlogPost = (props) => {
         </div>
     )
 }
+
+const BlogPost = (props) =>
+    <div className='blog-post'>
+        <Hoverable>
+            {s =>
+                <div className={`header ${ s ? 'red' : ''}`}>
+                    <div className="title">{props.title}</div>
+                    <div className="date">{props.date}</div>
+                </div>
+            }
+        </Hoverable>
+        <div className="tags">{props.tags.map(t => t+'/')}</div>
+    </div>
 
 export default BlogPost

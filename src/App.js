@@ -16,7 +16,7 @@ const App = (props) => {
     return (
         <Router>
             <div className='app'>
-                {/* <Sidebar /> */}
+                <Sidebar />
                 <Switch>
                     <Route
                         path="/"

@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import PostView from '../PostView'
 import FilterView from '../FilterView'
-import JiggleDiv from '../JiggleDiv'
 import BlogContainer from '../BlogContainer'
 import './BlogPage.css'
 
@@ -19,7 +18,7 @@ const BlogPage = (props) => {
                     <PostsContext.Provider value={{ state, dispatch }}>
                         <div className="blog-page-content">
                             <PostView />
-                            <FilterView />
+                            {/* <FilterView /> */}
                         </div>
                     </PostsContext.Provider>
                 }
