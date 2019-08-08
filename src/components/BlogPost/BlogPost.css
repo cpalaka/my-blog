@@ -1,5 +1,5 @@
 .blog-post {
-    margin-bottom: 1em;
+    margin-bottom: 1.52em;
 }
 
 .blog-post .header {
@@ -10,13 +10,11 @@
 
 .blog-post .title {
     font-size: 18px;
-    /* font-style: oblique;
-    font-weight: bold; */
 }
 
 .blog-post .showmore {
-    left: 0%;
-    font-size: 20px;
+    left: -10%;
+    font-size: 30px;
     position: absolute;
     cursor: pointer;
 }
@@ -24,6 +22,11 @@
 
 .blog-post .post-preview img{
     max-width: 50%;
+    margin: auto;
+}
+
+.blogtitle-zoom {
+    transform: scale(1.01);
 }
 
 .blog-post .post-preview.hide {
@@ -35,12 +38,27 @@
     transition: all 1s;
     height: 300px;
 }
+.blog-post .post-preview .content{
+    max-height: 280px;
+    overflow: hidden;
+}
 
 .blog-post .post-preview {
     max-height: 300px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .blog-post .tags {
     font-size: 12px;
+    display: flex;
+    cursor: pointer;
+}
+
+.blog-post .dots-link {
+    display: block;
+    cursor: pointer;
+    text-align: center;
 }

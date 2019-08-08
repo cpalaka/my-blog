@@ -8,16 +8,14 @@ import './BlogPage.css'
 export const PostsContext = React.createContext(null)
 
 const BlogPage = (props) => {
+    // console.log(props)
     return (
         <div className="blog-page">
-            {/* <h1>Home page</h1> */}
-            {/* <Link to='about'>To About</Link> */}
-            {/* <JiggleDiv /> */}
             <BlogContainer>
                 {(state, dispatch) =>
                     <PostsContext.Provider value={{ state, dispatch }}>
                         <div className="blog-page-content">
-                            <PostView />
+                            <PostView {...props} />
                             {/* <FilterView /> */}
                         </div>
                     </PostsContext.Provider>

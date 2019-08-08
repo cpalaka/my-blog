@@ -15,11 +15,11 @@ const PostView = (props) => {
     } = useContext(PostsContext)
     // console.log(allposts)
     const posts = selposts.length === 0 ? allposts : selposts
-    console.log(posts)
+    console.log('po',props)
     return (
         <div className='post-view'>
             {posts.map(post =>
-                <BlogPost {...post} key={post.title} />
+                <BlogPost {...post} key={post.title} history={props.history} />
             )}
         </div>
     )

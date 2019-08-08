@@ -5,26 +5,42 @@ import Hoverable from '../utils/Hoverable'
 // import './BlogPost.css'
 import './BlogPost.css'
 
-
 const BlogPost = (props) => {
     const [isFull, setIsFull] = useState(false)
+    console.log('lll',props)
     return (
-        <div className='blog-post'>
+        <div className='blog-post dark-text'>
             <Hoverable>
                 {s =>
-                <div className={`${ s ? 'grey' : ''}`}>
-                    <div className='showmore' onClick={()=>setIsFull(prev=>!prev)}>{isFull ?'-':'+'}</div>
-                    <div className='header'>
-                        
-                        <div className="title">{props.title.toUpperCase()}</div>
-                        <div className="date">{props.date}</div>
-                    </div>
-                    
-                </div>
+                    <>
+                        <div className='showmore' onClick={() => setIsFull(prev => !prev)}>{isFull ? '-' : '+'}</div>
+                        <div className={`${s ? 'blue-text blogtitle-zoom ' : ''}`}>
+                            <div className='header' onClick={()=>props.history.push('/blog/'+props.url)}>
+                                <div className="title">{props.title.toUpperCase()}</div>
+                                <div className="date">{new Date(props.date).toDateString().substring(4)}</div>
+                            </div>
+                        </div>
+                    </>
                 }
             </Hoverable>
-            <div className="tags">{props.tags.map((t,i) => (i!=0?'/':'')+t)}</div>
-            <div className={`post-preview ${isFull ? 'show' : 'hide'}`} dangerouslySetInnerHTML={{ __html: props.content }}>
+            <div className="tags grey-text">{props.tags.map(
+                (t, i) =>
+                    <>
+                        {i != 0
+                            ? <div>/</div>
+                            : null
+                        }
+                        <Hoverable>
+                            {st => <div onClick={() => null} className={`${st ? 'red-text' : ''}`}>{t}</div>}
+                        </Hoverable>
+                    </>
+            )}
+            </div>
+            <div className={`post-preview ${isFull ? 'show' : 'hide'}`} >
+                <div className='content' dangerouslySetInnerHTML={{ __html: props.content }} />
+                <Hoverable>
+                    {s=><div className={`dots-link ${s?'red-text':''}`}>{s?'> > >':'. . .'}</div>}
+                </Hoverable>
             </div>
 
         </div>

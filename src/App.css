@@ -27,24 +27,44 @@
     display: none;
 }
 
-.dark {
+.dark-bg {
     background-color: #1a1a1d;
 }
 
-.grey {
+.grey-bg {
     background-color: #4e4e50;
 }
 
-.blue {
+.blue-bg {
     background-color: #087e8b;
 }
 
-.red {
+.red-bg {
     background-color: #ff5a5f;
 }
 
-.white {
+.white-bg {
     background-color: #f5f5f5;
+}
+
+.dark-text {
+    color: #1a1a1d;
+}
+
+.grey-text {
+    color: #4e4e50;
+}
+
+.blue-text {
+    color: #087e8b;
+}
+
+.red-text {
+    color: #ff5a5f;
+}
+
+.white-text {
+    color: #f5f5f5;
 }
 
 body {
