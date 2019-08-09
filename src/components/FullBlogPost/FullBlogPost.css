@@ -1,0 +1,17 @@
+.fullblog .blog-title {
+    margin-bottom: 2em;
+    text-align: center;
+    padding-top: 2em;
+    font-size: 20px;
+    font-weight: bold;
+    transform: rotate(-2deg) translateX(200%);
+    position: relative;
+    display: inline-block;
+    /* transform: ; */
+    margin: auto;
+}
+
+.fullblog .content {
+    margin: auto;
+    width: 50%;
+}

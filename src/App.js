@@ -6,6 +6,7 @@ import Sidebar from './components/Sidebar'
 import BlogPage from './components/BlogPage'
 import HomePage from './components/HomePage'
 import BlogPost from './components/BlogPost'
+import FullBlogPost from './components/FullBlogPost'
 import AboutPage from './components/AboutPage'
 import TagPage from './components/TagPage'
 import { blogDataFromRawMds, filterPostsWithTags } from './components/utils/functions'
@@ -42,7 +43,7 @@ const App = (props) => {
                             exact
                             path={'/blog/' + p.url}
                             key={p.url}
-                            render={props => <BlogPost {...p} />}
+                            render={props => <FullBlogPost {...p} />}
                         />
                     )}
                     {blogData.tags.map(t =>

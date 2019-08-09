@@ -39,7 +39,7 @@ const BlogPost = (props) => {
             <div className={`post-preview ${isFull ? 'show' : 'hide'}`} >
                 <div className='content' dangerouslySetInnerHTML={{ __html: props.content }} />
                 <Hoverable>
-                    {s=><div className={`dots-link ${s?'red-text':''}`}>{s?'> > >':'. . .'}</div>}
+                    {s=><div onClick={()=>props.history.push('/blog/'+props.url)} className={`dots-link ${s?'red-text':''}`}>{s?'> > >':'. . .'}</div>}
                 </Hoverable>
             </div>
 
