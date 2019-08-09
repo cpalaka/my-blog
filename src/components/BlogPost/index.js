@@ -31,7 +31,7 @@ const BlogPost = (props) => {
                             : null
                         }
                         <Hoverable>
-                            {st => <div onClick={() => null} className={`${st ? 'red-text' : ''}`}>{t}</div>}
+                            {st => <div onClick={() => props.history.push('/tag/' + t)} className={`${st ? 'red-text' : ''}`}>{t}</div>}
                         </Hoverable>
                     </>
             )}

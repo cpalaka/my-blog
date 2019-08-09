@@ -15,6 +15,7 @@ const BlogPage = (props) => {
                 {(state, dispatch) =>
                     <PostsContext.Provider value={{ state, dispatch }}>
                         <div className="blog-page-content">
+                            <div className='blog-title'>BLOG TITLE</div>
                             <PostView {...props} />
                             {/* <FilterView /> */}
                         </div>

@@ -13,3 +13,8 @@
     backface-visibility: hidden;
     will-change: overflow; */
 }
+
+.blog-page .blog-title {
+    margin-bottom: 2em;
+    text-align: center;
+}

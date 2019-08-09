@@ -18,6 +18,7 @@ const PostView = (props) => {
     console.log('po',props)
     return (
         <div className='post-view'>
+            
             {posts.map(post =>
                 <BlogPost {...post} key={post.title} history={props.history} />
             )}

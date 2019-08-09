@@ -7,12 +7,15 @@ import BlogPage from './components/BlogPage'
 import HomePage from './components/HomePage'
 import BlogPost from './components/BlogPost'
 import AboutPage from './components/AboutPage'
+import TagPage from './components/TagPage'
+import { blogDataFromRawMds, filterPostsWithTags } from './components/utils/functions'
 import rawPosts from '../markdown'
 import "./App.css";
 
-const posts = rawPosts.map(post => JSON.parse(post))
+const blogData = blogDataFromRawMds(rawPosts) 
 
-const App = (props) => {
+const App = (props) => {  
+    console.log('bd', blogData) 
     return (
         <Router>
             <div className='app'>
@@ -34,12 +37,20 @@ const App = (props) => {
                         component={AboutPage}
                     />
                     {/* TODO : clean up routes */}
-                    {posts.map(p =>
+                    {blogData.allposts.map(p =>
                         <Route
                             exact
                             path={'/blog/' + p.url}
                             key={p.url}
                             render={props => <BlogPost {...p} />}
+                        />
+                    )}
+                    {blogData.tags.map(t =>
+                        <Route
+                            exact
+                            path={'/tag/' + t.name}
+                            key={t.name}
+                            render={props => <TagPage {...t} {...props} posts={filterPostsWithTags(blogData.allposts, [t.name])} />}
                         />
                     )}
                     {/* on error */}
