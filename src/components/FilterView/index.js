@@ -1,36 +1,20 @@
-import React, { useContext, useState } from 'react'
-import { PostsContext } from '../BlogPage'
+import React, { useState } from 'react'
 import Tag from '../Tag'
 import './FilterView.css'
 
-const FilterView = (props) => {
-    // console.log(props)
-    const [ showFilter, setShowFilter ] = useState(false)
+const FilterView = ({ tags, dispatch }) => {
+    const [shown, setShown] = useState(false)
 
-    const {
-        state: {
-            allposts: allposts,
-            tags: tags
-        },
-        dispatch: dispatch
-    } = useContext(PostsContext)
-    console.log('tags',tags)
+    console.log('tags', tags)
     return (
-        <div className='filter-view'>
-            {/* {tags.map(tag =>
-                <div
-                    className={tag.isSelected ? 'tag cadet' : 'tag'}
-                    key={tag.name}
-                    onClick={e => dispatch({ type: 'select_tag', tag: tag.name })} >
-                        <div>{tag.name}</div>
-                        <div>{tag.count}</div>
+        <div className={`filter-view white-bg ${shown ? 'show' : 'hide'}`}>
+            <div className={`filter-tags-box`}>
+                <div className='tags'>{tags.map(tag =>
+                    <div onClick={() => dispatch({ type: 'select_tag', tag: tag.name })}>
+                        <Tag {...tag} key={tag.name} >{tag}</Tag>
+                    </div>)}
                 </div>
-            )} */}
-            {/* <div className='filter-body' />
-            <div className='filter-toggle' onClick={()=>setShowFilter(prev => !prev)}/> */}
-
-            <div className="filter-tags">
-                {tags.map(tag => <Tag {...tag} key={tag.name}>{tag}</Tag>)}
+                <div className='show-tags-btn' onClick={() => setShown(prevS => !prevS)}>filter by tags</div>
             </div>
         </div>
     )

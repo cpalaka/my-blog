@@ -4,6 +4,7 @@ import { blogDataFromRawMds, filterPostsWithTags } from '../utils/functions'
 import fromEntries from 'fromentries'
 
 const reducer = (state, action) => {
+    console.log('here', state, action)
     switch(action.type) {
         case 'select_tag':
             // flip isSelected flag on current selected tag

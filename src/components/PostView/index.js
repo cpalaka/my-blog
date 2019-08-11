@@ -1,21 +1,12 @@
-import React, { useContext } from 'react'
-import { PostsContext } from '../BlogPage'
+import React from 'react'
 import BlogPost from '../BlogPost'
 import JiggleDiv from '../utils/JiggleDiv'
 import './PostView.css'
 
-const PostView = (props) => {
-    const {
-        state: { 
-            allposts: allposts,
-            selposts: selposts,
-            tags: tags 
-        },
-        dispatch: dispatch
-    } = useContext(PostsContext)
+const PostView = ({allposts, selposts, ...props}) => {
     // console.log(allposts)
     const posts = selposts.length === 0 ? allposts : selposts
-    console.log('po',props)
+    // console.log('po',props)
     return (
         <div className='post-view'>
             

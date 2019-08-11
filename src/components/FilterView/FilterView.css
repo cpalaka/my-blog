@@ -1,12 +1,11 @@
 .filter-view {
-    width: 25%;
-    height: 30%;
+    width: 200px;
+    height: 150px;
 
     position: fixed;
     right: 10px;
     top: 10px;
-    
-    /* background-color: black; */
+    /* display: inline-block; */
 }
 
 .show {
@@ -15,20 +14,21 @@
 }
 
 .hide {
-    top: -270px;
+    top: -130px;
     transition: top 1s;
 }
 
-/* .filter-view:active {
-    t
-} */
-
-.filter-body {
-    height: 90%;
-    background-color: red;
+.filter-view .filter-tags-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
-.filter-toggle {
-    background-color: green;
-    height: 10%;
+.filter-view .tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: auto;
+    margin-bottom: 0.5em;
 }
