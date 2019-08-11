@@ -43,7 +43,7 @@ const App = (props) => {
                             exact
                             path={'/blog/' + p.url}
                             key={p.url}
-                            render={props => <FullBlogPost {...p} />}
+                            render={props => <FullBlogPost {...p} {...props} />}
                         />
                     )}
                     {blogData.tags.map(t =>

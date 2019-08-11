@@ -6,5 +6,5 @@
     -ms-overflow-style: none;
     width: 85%;
     margin: auto;
-    transform: skewX(1deg);
+    transform: skew(1deg);
 }

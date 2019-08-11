@@ -1,17 +1,55 @@
 .fullblog .blog-title {
-    margin-bottom: 2em;
     text-align: center;
     padding-top: 2em;
+    padding: 0.5em;
     font-size: 20px;
     font-weight: bold;
-    transform: rotate(-2deg) translateX(200%);
+    transform: rotate(-2deg) translate(-50%, -20%);
     position: relative;
+    left: 50%;
     display: inline-block;
     /* transform: ; */
-    margin: auto;
+    margin: 0 auto 1.5em auto ;
+}
+
+.fullblog {
+      /* overflow: auto; */
+      height: auto;
+      /* padding: .5rem; */
+      -webkit-overflow-scrolling: touch;
+      -ms-overflow-style: none;
+      width: 50%;
+      margin: auto;
+      transform: skew(1deg);
 }
 
 .fullblog .content {
     margin: auto;
-    width: 50%;
+    text-align: justify;
+    /* width: 60%; */
+}
+
+.fullblog #disqus_thread {
+    /* width: 60%; */
+    margin: auto;
+}
+
+.fullblog .tags {
+    display: inline-block;
+    font-size: 12px;
+    display: flex;
+    cursor: pointer;
+    /* text-align: center; */
+}
+
+.fullblog .meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+    /* width: 60%; */
+    margin: auto;
+}
+
+.fullblog .date {
+    font-style: italic;
 }

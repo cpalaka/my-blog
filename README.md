@@ -7,7 +7,7 @@ TODO:
 -generate hashed names for static content (js/css/images) via webpack
 =social links: github, linkedin, twitter, rym, goodreads, my animelist,
 -write tests for all components
--tags routes (/tag/blah)
+-make entire app responsive
 
 
 color schemes:

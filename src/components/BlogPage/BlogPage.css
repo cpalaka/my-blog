@@ -17,4 +17,10 @@
 .blog-page .blog-title {
     margin-bottom: 2em;
     text-align: center;
+    display: inline-block;
+    padding: 0.5em;
+    position: relative;
+    left: 50%;
+    font-size: 22px;
+    transform: rotate(1deg) translateX(-50%);
 }
