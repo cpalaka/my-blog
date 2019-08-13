@@ -10,6 +10,7 @@ TODO:
 -make entire app responsive
 
 
+
 color schemes:
 common:
 #1a1a1d
