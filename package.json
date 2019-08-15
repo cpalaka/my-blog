@@ -7,7 +7,8 @@
     "test": "jest",
     "start": "node index-blog-posts.js && webpack-dev-server --config ./webpack-dev.config.js",
     "build": "node index-blog-posts.js && webpack --config ./webpack-prod.config.js",
-    "upload": "node upload-to-s3.js"
+    "upload": "node upload-to-s3.js",
+    "postbuild": "react-snap"
   },
   "keywords": [
     "react",
@@ -36,6 +37,7 @@
     "loader-utils": "^1.2.3",
     "markdown-loader": "^5.1.0",
     "marked": "^0.6.3",
+    "react-snap": "^1.23.0",
     "react-test-renderer": "^16.9.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.39.2",
@@ -55,5 +57,8 @@
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
       "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
     }
+  },
+  "reactSnap" : {
+    "source": "dist"
   }
 }

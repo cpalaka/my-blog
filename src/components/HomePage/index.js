@@ -20,6 +20,7 @@ const HomePage = (props) => {
                         <SocialLink name='twitter' link='https://twitter.com/sincosan' logo={twitterlogo} />
                         <SocialLink name='email' link='mailto:cpalaka@gmail.com' logo={emaillogo} />
                     </div> */}
+                    C H A I P A L A K A
             </div>
             {/* </JiggleDiv> */}
             
