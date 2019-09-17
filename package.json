@@ -7,8 +7,7 @@
     "test": "jest",
     "start": "node index-blog-posts.js && webpack-dev-server --config ./webpack-dev.config.js",
     "build": "node index-blog-posts.js && webpack --config ./webpack-prod.config.js",
-    "upload": "node upload-to-s3.js",
-    "postbuild": "react-snap"
+    "upload": "node upload-to-s3.js"
   },
   "keywords": [
     "react",

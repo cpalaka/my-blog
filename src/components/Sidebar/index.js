@@ -2,34 +2,36 @@ import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { withRouter } from 'react-router'
 import Hoverable from '../utils/Hoverable'
+import HomeIcon from '../../../images/home.svg'
+import BlogIcon from '../../../images/blog.svg'
+import UserIcon from '../../../images/user.svg'
 import './Sidebar.css'
 
 const Sidebar = (props) => {
     console.log(props)
     return (
         <div className='sitelinks'>
+            
             <Hoverable>
                 {hovered =>
-                    <>
-                        <div className={`box ${hovered || props.location.pathname === '/' ? 'hoverable-show' : 'hoverable-hide'}`}></div>
-                        <Link to='/' style={{ textDecoration: 'none' }}>Home</Link>
-                    </>
+                    <Link to='/about' style={{ textDecoration: 'none' }}>
+                        <img src={UserIcon} alt='user icon' />
+                    </Link>
                 }
             </Hoverable>
             <Hoverable>
                 {hovered =>
-                    <>
-                        <div className={`box ${hovered || props.location.pathname === '/blog'? 'hoverable-show' : 'hoverable-hide'}`}></div>
-                        <Link to='/blog' style={{ textDecoration: 'none' }}>Blog</Link>
-                    </>
+                    <Link to='/' style={{ textDecoration: 'none' }}>
+                        <img src={HomeIcon} alt='home icon' />
+                    </Link>
+
                 }
             </Hoverable>
             <Hoverable>
                 {hovered =>
-                    <>
-                        <div className={`box ${hovered || props.location.pathname === '/about'? 'hoverable-show' : 'hoverable-hide'}`}></div>
-                        <Link to='/about' style={{ textDecoration: 'none' }}>Me</Link>
-                    </>
+                    <Link to='/blog' style={{ textDecoration: 'none' }}>
+                        <img src={BlogIcon} alt='blog icon' />
+                    </Link>
                 }
             </Hoverable>
         </div>

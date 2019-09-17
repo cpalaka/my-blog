@@ -7,7 +7,8 @@ TODO:
 -write tests for all components
 -make entire app responsive
 -add favicon
-
+-implement # like urls (quick links in blog), and use to create footnotes for blog
+icons by freepik on flaticon.com
 
 color schemes:
 common:
