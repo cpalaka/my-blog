@@ -1,41 +1,48 @@
-.side-bar {
-    width: 25%;
-    height: 100vh;
-}
-
-.nav-square {
-    position: relative;
-    top: 10px;
-    width: 95%;
-    margin: auto;
-    background-color: aquamarine;
-}
-
-.box {
-    width: 10px;
-    height: 10px;
-    background-color: black;
-}
-
 .sitelinks {
+    /* width: 40%; */
     z-index: 99;
     position: fixed;
+    justify-content: space-between;
     left: 50%;
     bottom: 0%;
     transform: translateX(-50%);
     display: flex;
     flex-direction: row;
     margin: auto;
-}
-.sitelinks Link {
-    text-decoration: overline;
-    color: #4e4e50;
+    align-items: flex-end;
 }
 
-.sitelinks a img {
-    width: 50%;
-    height: 50%;
-    margin: 0;
+.sitelinks .home img{
+    width: 60px;
+    height: 60px;
+}
+
+.sitelinks .about img{
+    width: 40px;
+    height: 40px;
+}
+
+.sitelinks .blog img{
+    width: 40px;
+    height: 40px;
+}
+
+.blog-submenu {
+    position: relative;
+    top: -30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-submenu.show {
+    transition: height 1s;
+    height: 68px;
+}
+
+.blog-submenu.hide {
+    transition: all 1s;
+    height: 0px;
+
 }
 
 @media (max-width: 991px) {
