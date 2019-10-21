@@ -9,6 +9,7 @@ import BlogPost from './components/BlogPost'
 import FullBlogPost from './components/FullBlogPost'
 import AboutPage from './components/AboutPage'
 import TagPage from './components/TagPage'
+import Skybox from './components/Skybox'
 import { blogDataFromRawMds, filterPostsWithTags } from './components/utils/functions'
 import rawPosts from '../markdown'
 import "./App.css";
@@ -61,6 +62,11 @@ const App = (props) => {
         </Router >
     )
 }
+
+// const App = props => 
+//     <div>
+//         <Skybox />
+//     </div>
 
 const Error = (props) => <h1>404 GTFO</h1>
 

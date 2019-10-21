@@ -31,9 +31,21 @@ module.exports = {
                 test: /\.md$/,
                 use: [
                     { loader: 'html-loader' },
-                    { 
-                        loader: path.resolve('./markdown-blogpost-loader.js'), 
-                        options: {isDevelopment: true}
+                    {
+                        loader: path.resolve('./markdown-blogpost-loader.js'),
+                        options: { isDevelopment: true }
+                    }
+                ]
+            },
+            {
+                test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: 'fonts/'
+                        }
                     }
                 ]
             }

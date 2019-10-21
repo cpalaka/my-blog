@@ -9,6 +9,11 @@ TODO:
 -add favicon
 -implement # like urls (quick links in blog), and use to create footnotes for blog
 icons by freepik on flaticon.com
+-refactor using rebass/styled-system/theme-ui/styled-icons
+-mdx.js (w/ code highlighting)
+
+
+--optimization: use react memo / useCallback
 
 color schemes:
 common:

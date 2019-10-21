@@ -14,7 +14,7 @@
 
 .home-page .name {
     font-size:42px;
-    font-family: "Roboto", stack-mono, monospace;
+    /* font-family: "Roboto", stack-mono, monospace; */
     /* font-weight: bold; */
     margin: 0.5em 0;
     white-space: nowrap;
