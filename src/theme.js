@@ -1,6 +1,6 @@
 // example theme.js
 export default {
-    breakpoints: ['40em', '52em', '64em'],
+    breakpoints: ['768px'], // breakpoint for now
     fontSizes: [
         12, 14, 16, 20, 24, 32, 48, 64
     ],
@@ -22,7 +22,7 @@ export default {
         bold: 700,
     },
     lineHeights: {
-        body: 1.5,
+        // body: 1.5,
         heading: 1.25,
     },
     shadows: {
